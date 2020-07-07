@@ -1,0 +1,133 @@
+* {box-sizing: border-box;}
+
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+@keyframes example {
+  0%   {background-color:#2E8B57;}
+  50%  {background-color:#21653F; left:200px; top:200px;}
+  100% {background-color:#2E8B57; left:0px; top:0px;}
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #2E8B57;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+main {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  flex: auto;
+}
+
+header {
+  display:block;
+  background-color: #2E8B57;
+  color: #ffffff;
+  padding: 15px;
+  text-align:center;
+  font-size: 30px;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("./Images/Neil.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+}
+
+.nav li {
+  float: right;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.nav .active {
+  background-color: #4CAF50;
+}
+
+.widthSet {
+    max-width: 500px;
+}
+
+.about {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 30px;
+  margin: 25px 25px 25px 25px;
+  text-align: center;
+  height: 70%;
+}
+
+.info {
+  font-size: 35px;
+  padding: 60px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #4CAF50;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
